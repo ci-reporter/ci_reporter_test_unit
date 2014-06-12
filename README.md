@@ -6,6 +6,10 @@ system.
 [tu]: http://www.ruby-doc.org/stdlib-2.1.2/libdoc/test/unit/rdoc/Test/Unit.html
 [ci]: https://github.com/ci-reporter/ci_reporter
 
+## Supported versions
+
+The latest release of Test::Unit 2.5 is supported.
+
 ## Installation
 
 Add this line to your application's Gemfile:
