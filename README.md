@@ -3,6 +3,10 @@
 Connects [Test::Unit][tu] to [CI::Reporter][ci], and then to your CI
 system.
 
+[![Gem Version](https://badge.fury.io/rb/ci_reporter_test_unit.svg)](http://badge.fury.io/rb/ci_reporter_test_unit)
+[![Build Status](https://travis-ci.org/ci-reporter/ci_reporter_test_unit.svg?branch=master)](https://travis-ci.org/ci-reporter/ci_reporter_test_unit)
+[![Code Climate](https://codeclimate.com/github/ci-reporter/ci_reporter_test_unit.png)](https://codeclimate.com/github/ci-reporter/ci_reporter_test_unit)
+
 [tu]: http://www.ruby-doc.org/stdlib-2.1.2/libdoc/test/unit/rdoc/Test/Unit.html
 [ci]: https://github.com/ci-reporter/ci_reporter
 
