@@ -1,10 +1,10 @@
 require File.dirname(__FILE__) + "/../../../spec_helper.rb"
 require 'rake'
-
-require 'ci/reporter/internal'
-include CI::Reporter::Internal
+require 'ci/reporter/test_utils/unit'
 
 describe "ci_reporter ci:setup:testunit task" do
+  include CI::Reporter::TestUtils::Unit
+
   before(:each) do
     @rake = Rake::Application.new
     Rake.application = @rake
