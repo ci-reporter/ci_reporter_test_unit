@@ -32,7 +32,7 @@ $ bundle
 ## Usage
 
 Require the reporter in your Rakefile, and ensure that
-`ci:setup:testunit` is a dependency of your RSpec task:
+`ci:setup:testunit` is a dependency of your Test::Unit task:
 
 ```ruby
 require 'ci/reporter/rake/test_unit'
