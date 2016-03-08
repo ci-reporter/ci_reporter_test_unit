@@ -13,7 +13,7 @@ system.
 
 ## Supported versions
 
-The latest release of Test::Unit 2.5 is supported.
+The latest release of Test::Unit 3.1 is supported.
 
 ## Installation
 
