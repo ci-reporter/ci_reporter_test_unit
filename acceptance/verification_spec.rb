@@ -36,10 +36,15 @@ describe "Test::Unit acceptance" do
 
     it { is_expected.to have(0).errors }
     it { is_expected.to have(0).failures }
-    it { is_expected.to have(1).testcases }
+    it { is_expected.to have(2).testcases }
 
     describe "the assertion count" do
       subject { result.assertions_count }
+      it { is_expected.to eql 1 }
+    end    
+
+    describe "the skipped count" do
+      subject { result.skipped_count}
       it { is_expected.to eql 1 }
     end
 

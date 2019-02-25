@@ -31,6 +31,7 @@ module CI
       def initialize(fault) @fault = fault end
       def failure?() false end
       def error?() true end
+      def skipped?() false end
       def name() @fault.exception.class.name end
       def message() @fault.exception.message end
       def location() @fault.exception.backtrace.join("\n") end
@@ -41,6 +42,7 @@ module CI
       def initialize(fault) @fault = fault end
       def failure?() true end
       def error?() false end
+      def skipped?() false end
       def name() Test::Unit::AssertionFailedError.name end
       def message() @fault.message end
       def location() @fault.location.join("\n") end
@@ -51,6 +53,7 @@ module CI
       def initialize(fault) @fault = fault end
       def failure?() false end
       def error?() false end
+      def skipped?() true end
       def name() @fault.class.name end
       def message() @fault.message end
       def location() @fault.location.join("\n") end
@@ -61,6 +64,7 @@ module CI
       def initialize(fault) @fault = fault end
       def failure?() false end
       def error?() false end
+      def skipped?() false end
       def name() @fault.class.name end
       def message() @fault.message end
       def location() @fault.location.join("\n") end
@@ -103,7 +107,9 @@ module CI
 
       def fault(fault)
         tc = @current_suite.testcases.last
-        tc.failures << Failure.new(fault)
+        f = Failure.new(fault)
+        tc.failures << f 
+        tc.skipped=true if f.skipped? 
       end
 
       def finished(elapsed_time)

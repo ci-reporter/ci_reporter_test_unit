@@ -14,4 +14,7 @@ class TestUnitExampleTestTwo < Test::Unit::TestCase
   def test_two
     assert true
   end
+  def test_three
+    omit 'omitted'
+  end
 end
